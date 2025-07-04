@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Menu with Dropdown</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Mulish', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #145da0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: relative;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navbar li {
+      position: relative;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      padding: 14px 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: block;
+    }
+
+    .navbar a:hover {
+      background-color: #0c2d48;
+      border-radius: 4px;
+    }
+
+    .navbar .highlight a {
+      background-color: #2e8bc0;
+      border-radius: 4px;
+    }
+
+    .navbar .highlight a:hover {
+      background-color: #b1d4e0;
+      color: #0c2d48;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      min-width: 160px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .navbar li:hover .dropdown-content {
+      display: block;
+    }
+
+    .calendar-container {
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    iframe {
+      border: none;
+      width: 95%;
+      height: 750px;
+    }
+  </style>
+</head>
+<body>
+<div class="navbar">
+  <ul>
+    <li class="highlight"><a href="https://sites.google.com/a/isik.vic.edu.au/plc/plc" target="_blank">PLC Site</a></li>
+    <li><a href="#" target="_blank">Main</a>
+      <div class="dropdown-content">
+        <a href="https://docs.google.com/document/d/1Kpv06EJU-LVVpDDwkIL1LWtpeVe6TX1-SSAo-jPdfFU" target="_blank">Curriculum Framework</a>
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ93NpDfzHDcRn3B21U6WBiyq5pYAq-2epH4Ucee5gijrSfl8IrtGIVs4z4wGyAjL2bAOXl_8htvuC/pubhtml" target="_blank">Curriculum Overview</a>
+        <a href="https://docs.google.com/spreadsheets/d/1byY2ac4lZKCLzFlbt0VjL-WU5iBBf93gzK98Zm7OEqM" target="_blank">Curriculum Teams</a>
+        <a href="https://sites.google.com/a/isik.vic.edu.au/plc/plc/planners" target="_blank">Planners</a>
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRChIuwdQkspQTF_ChUkMCHZZXoodsilWJyytitYMIvYPrnbaRcirUxeaktvu7kY5Hx444QQs8-ZsX8/pubhtml" target="_blank">Class Codes</a>
+      </div>
+    </li>
+    <li><a href="#" target="_blank">Calendars</a>
+      <div class="dropdown-content">
+        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSvJDxXoJLTAxv87AhnSITg6VrZAs6tX8bnMrMlu_zju3pDMC_s7kQ5SOz-bxBhzWiQFsT5O1lsdrG5/pubhtml?gid=1083505455&single=true" target="_blank">Master</a>
+        <a href="https://docs.google.com/spreadsheets/d/1V8x1yVh7Q7Aw7YzJPEYrlxv_2GZoMUDAJp4_pxOU1QM" target="_blank">Curriculum</a>
+        <a href="https://docs.google.com/spreadsheets/d/1WHGhIrKWaXGZLOUUs7e9AS_rq31iI9f3cDQpgRUGq8E" target="_blank">Wednesdays</a>
+      </div>
+    </li>
+    <li><a href="#" target="_blank">Departments</a>
+      <div class="dropdown-content">
+        <a href="https://sites.google.com/a/isik.vic.edu.au/plc/departments/primary" target="_blank">Primary</a>
+        <a href="https://sites.google.com/a/isik.vic.edu.au/plc/departments/secondary" target="_blank">Secondary</a>
+      </div>
+    </li>
+    <li><a href="#" target="_blank">Campuses</a>
+      <div class="dropdown-content">
+        <a href="https://sites.google.com/isik.vic.edu.au/sirius-dlc/home" target="_blank">DLC</a>
+        <a href="https://sites.google.com/sirius.vic.edu.au/eastmeadows/management" target="_blank">EMC</a>
+        <a href="https://sites.google.com/sirius.vic.edu.au/ibrahimdellal/management" target="_blank">IDC</a>
+        <a href="https://sites.google.com/sirius.vic.edu.au/keysborough/management" target="_blank">KBC</a>
+        <a href="https://sites.google.com/sirius.vic.edu.au/meadowfair/management" target="_blank">MFC</a>
+        <a href="https://sites.google.com/sirius.vic.edu.au/shepparton/management" target="_blank">SPC</a>
+      </div>
+    </li>
+    <li><a href="#" target="_blank">Reference</a>
+      <div class="dropdown-content">
+        <a href="https://sites.google.com/a/isik.vic.edu.au/plc/reference/booklets" target="_blank">Booklets</a>
+        <a href="https://sites.google.com/a/isik.vic.edu.au/plc/reference/data" target="_blank">Data</a>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="calendar-container">
+  <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Australia%2FSydney&src=aXNpay52aWMuZWR1LmF1X2I1bXNnbTlsYjZ0NmhraHI5aDdpa29vaDlnQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230a0302&showTitle=0&showPrint=0&showTz=0"></iframe>
+</div>
+</body>
+</html>
