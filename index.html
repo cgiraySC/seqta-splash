@@ -7,6 +7,11 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
 
+    :root {
+      --navbar-h: 56px;
+      --banner-h: 44px;
+    }
+
     body {
       font-family: 'Mulish', sans-serif;
       margin: 0;
@@ -23,8 +28,10 @@
       border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: center;
-      padding: 10px 0;
-      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: var(--navbar-h);
     }
 
     .navbar ul {
@@ -32,6 +39,8 @@
       margin: 0;
       padding: 0;
       display: flex;
+      align-items: center;
+      height: 100%;
     }
 
     .navbar li {
@@ -41,7 +50,7 @@
     .navbar a {
       text-decoration: none;
       color: white;
-      padding: 14px 20px;
+      padding: 10px 20px;
       font-weight: bold;
       transition: background-color 0.3s;
       display: block;
@@ -69,7 +78,7 @@
       left: 0;
       background-color: white;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+      z-index: 1100;
       min-width: 160px;
     }
 
@@ -93,8 +102,16 @@
       color: #000;
       text-align: center;
       font-weight: bold;
-      padding: 12px;
+      padding: 10px 12px;
       font-size: 16px;
+      position: sticky;
+      top: var(--navbar-h);
+      z-index: 900;
+      height: var(--banner-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
     }
 
     .banner a {
@@ -162,7 +179,7 @@
 </div>
 
 <div class="banner">
-  Complete 2026 Teaching Allotment Form before September 1 — 
+  Complete 2026 Teaching Allotment Form before September 1 —
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3v8DBKkyj5ejd-Y1I5vWOmBiDZQiMTrW4eCsH20cDQWHllQ/viewform?usp=dialog" target="_blank">Click here</a>
 </div>
 
@@ -171,4 +188,3 @@
 </div>
 </body>
 </html>
-
